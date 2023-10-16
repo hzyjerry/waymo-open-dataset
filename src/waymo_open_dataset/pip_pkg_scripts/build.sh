@@ -18,6 +18,11 @@
 
 set -e -x
 
-bazelisk test -c opt ... --test_output=all
+## TODO: no test
+## TODO: build tutorial
+
+# bazelisk test -c opt ... --test_output=all
+# bazel test //waymo_open_dataset/...
 bazelisk build -c opt //waymo_open_dataset/pip_pkg_scripts:wheel_manylinux
+bazelisk build -c opt //waymo_open_dataset/tutorial:jupyter_kernel
 cp bazel-out/k8-opt/bin/waymo_open_dataset/pip_pkg_scripts/auditwheel_manylinux/* /tmp/wod

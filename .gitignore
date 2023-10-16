@@ -1,4 +1,6 @@
 # Ignore backup files.
+.ipynb_checkpoints/
+.ipynb
 *~
 # Ignore Vim swap files.
 .*.swp
